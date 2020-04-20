@@ -7,6 +7,138 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/master.css">
+
+    <style>
+        .event-img {
+            width: 100%;
+            height: 124px;
+            background: #C4C4C4;
+            position: relative;
+           
+        }
+         
+        .no-border.group input,  .no-border.group textarea{
+            border: none;
+            color: #000;
+    font-weight: bold;
+        }
+
+        .no-border  input:focus ~ label, .no-border input:valid ~ label, .no-border textarea:focus ~ label, 
+        .no-border textarea:valid ~ label {
+    top: -14px;
+    font-size: 18px;
+
+    background: #fff;
+    padding: 0px 7px;
+}
+
+.event-list {
+    margin: 0;
+    padding: 0;
+}
+.event-list-submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -28px;
+    display: none;
+}
+.event-list li {
+    display: flex;
+}
+.event-list li .icon {
+    max-height: 22px;
+    margin-right: 12px;
+    margin-left: -30px;
+    max-width: 18px;
+}
+.event-list li {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #606060;
+    position: relative;
+    padding: 7px 0;
+    margin: 7px 0;
+    margin-left: 30px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.event-list li p {
+    margin: 0;
+}
+.event-list li .heading {
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+margin:0;
+color: #000;
+font-weight: 500;
+}
+.no-border.group {
+    position: relative;
+    margin: 25px 0;
+    margin-bottom: 0;
+    margin-left: -14px;
+}
+.w100 {
+    width: 100%;
+}
+.dir-col {
+    flex-direction: column;
+}
+
+
+.dir-col .heading {
+    margin-top: 7px !important;
+
+}
+.event-list-btn {
+    flex-direction: column;
+    position: relative;
+}
+.event-list-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: url(img/icons/chev-down.png) no-repeat center;
+    right:0;
+}
+.event-list-submenu li:last-child {
+    border: none;
+}
+
+.point-list {
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+.point-list li {
+    color: #606060;
+    font-size: 16px;
+    position: relative;
+    padding: 12px 0;
+    padding-left: 22px;
+    
+}
+.point-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: url(img/icons/point-icon.png) no-repeat center;
+    left:0;
+    top: 17px;
+}
+.edit-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+    </style>
 </head>
 <body>
     <nav class="jm-navbar">
@@ -15,7 +147,7 @@
                 <li class="menu-icon-toggle"><img src="img/menu.png" alt=""></li>   
                 <li>JOMOFi</li>
                 <li>
-                    <img src="img/Bell.png" alt="">
+                    <img  src="img/Bell.png" alt="">
                 </li>     
              </ul>
         
@@ -24,56 +156,153 @@
      
 
 
-   <main>
+   <main style="margin-bottom: 60px;">
   
 
-    
-       <section class="container spacer">
-
-        <div class="toplist">
-            <div class="flex-row close-sidebar">
-                <img width="15" src="img/cross-blue.png" alt=""> <h4 class="wt">
-                    Create Event
-                </h4>
-            </div>
+    <div class="container no-padding">
+        <div class="flex-row close-sidebar" style="justify-content: flex-start;padding-left: 15px;">
+            <img width="15" src="img/cross-blue.png" alt=""> <h4 class="wt">
+                Create Event
+            </h4>
+        </div>
+        <div class="event-img">
            
+            <img class="edit-icon" src="img/icons/Edit icon.png" alt="">
         </div>
         
 
-        
-            <div class="card text-center border">
-                <img src="img/player.png" alt="">
-                <p class="text bold mb0">Player</p>
-               <div class="spacer"></div>
+    </div>
+    <div class="container">
+        <div class="group no-border ">
+            <input type="text" required="required" value="Sunday Mega PUBG Series" autofocus/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Event Name</label>
+          </div>
+          <ul  class="event-list">
+              <li>
+                  <img class="icon" src="img/icons/Usernamen icon.png" alt="">
+                  <span>
+                      <p class="heading">UserName</p>
+                      <p>Host</p>
+                  </span>
+              </li>
+              <li>
+                <img class="icon" src="img/icons/Clock icon.png" alt="">
+
+                  <table class="w100">
+                      <tr>
+                          <th>Today</th>
+                          <th>
+                            7:00 AM
+                          </th>
+                      </tr>
+                  </table>
+              </li>
+              
            
-            <form>
-                <div class="login-box">
+
+
+              <li>
+                <img class="icon" src="img/icons/Usernamen icon.png" alt="">
+                  Map
+              </li>
+              <li>
+                <img class="icon" src="img/icons/Game Mode icon.png" alt="">
+                  Game Mode
+              </li>
+              <li>
+                <img class="icon" src="img/icons/Fee icon.png" alt="">
+                  Fee Type
+              </li>
+              <li>
+                <img class="icon" src="img/icons/Entry fee icon.png" alt="">
+                Entry Fee Amount
+              </li>
+              <li>
+                <img class="icon" src="img/icons/No. of players icon.png" alt="">
+                No. of players allowed</li>
+
+                <li>
+                    <img class="icon" src="img/icons/No. of players icon.png" alt="">
+                    No. of players allowed
+                 </li>
+                 <li class="event-list-btn">
+                     <span>
+                        <img class="icon" src="img/icons/Ranking icon.png" alt="">
+                        Ranking criteria
+                     </span>
                    
-                    <div class="group">
-                        <input type="text" required="required"/>
-                        <span class="highlight"></span><span class="bar"></span>
-                        <label>Name</label>
-                      </div>
+                    <ul class="event-list-submenu">
+                        <li class="dir-col">
+                            Chicken Dinnner Reward
+                            <p class="heading">
+                                <img src="img/icons/rupee.png" alt="">
+                                0
+                            </p>
+                        </li>
+                        <li class="dir-col">
+                            First Reward
+                            <p class="heading">
+                                <img src="img/icons/rupee.png" alt="">
+                                0
+                            </p>
+                        </li>
+                        <li class="dir-col">
+                            Per Kill Reward
+                            <p class="heading">
+                                <img src="img/icons/rupee.png" alt="">
+                                0
+                            </p>
+                        </li>
+                        <li class="dir-col">
+                            Highest Kill Reward
+                            <p class="heading">
+                                <img src="img/icons/rupee.png" alt="">
+                                0
+                            </p>
+                        </li>
+                    </ul>
+                 </li>
 
-                      <div class="group">
-                        <input type="text" required="required"/><span class="highlight"></span><span class="bar"></span>
-                        <label>Email</label>
-                      </div>
+                
+                 <li>
+                    <img class="icon" src="img/icons/I icon.png" alt="">
+                    About Event
+                 </li>
+                 <li>
+                    Event Status
 
-                </div>
-                <div class="text-center ">
-                    <P class="blue-color text bold no-margin">Next</P>
-                </div>
-               
-            </form>
-            </div>
+                 </li>
+                
 
-            <p class="text-muted text-left spacer-top">
-                *Manager is a Tournament Host or Video streamer
-who wants to work with us.
-            </p>
+          </ul>
+        <div class="spacer text-center">
+            <button class="btn btn-theme">
+                PUBLISH
+            </button>
+        </div>
+          
+    </div>
+
+
+    <section class="spacer container">
+        <h4 class="mb0">How it Works?</h4>
+        <ul class="point-list">
+            <li>Fill all the details as per your
+                plan.</li>
+                <li>
+                    Publish the Event
+                </li>
+                <li>
+                    Event gets listed on the 
+tournaments page.
+                </li>
+                <li>
+                    Event gets listed on the 
+tournaments page.
+                </li>
+        </ul>
     </section>
-
 
     </main>
   
@@ -98,5 +327,11 @@ who wants to work with us.
     <script src="js/jQuery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/controller.js"></script>
+
+    <script>
+        $('.event-list-btn').click(function () {
+            $(this).find('.event-list-submenu').slideToggle();
+        })
+    </script>
 </body>
 </html>
